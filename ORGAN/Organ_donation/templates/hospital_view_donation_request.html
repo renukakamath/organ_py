@@ -1,0 +1,47 @@
+{% include'hospital_header.html' %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="height: 500px">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>Welcome to Organ Donation</h1>
+    </div>
+  </section><!-- End Hero -->
+  
+<center>
+	<h2>Donation</h2>
+			<table class="table" style="width: 800px">
+				<tr>
+					<th>Sl.no</th>
+					<th>User</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Title</th>
+					<th>Organ Name</th>
+					<th>Date</th>
+					<th>Status</th>
+				</tr>
+				{% for row in data['dn'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['first_name']}} {{row['last_name']}}</td>
+					<td>{{row['phone']}}</td>
+					<td>{{row['email']}}</td>
+					<td>{{row['title']}}</td>
+					<td>{{row['organ_name']}}</td>
+					<td>{{row['date']}}</td>
+					  {% if row['status']=='pending' %}
+					<td><a class="btn btn-success" href="?action=accept&id={{row['donation_id']}}">Accept</a></td>
+					<td><a class="btn btn-info" href="?action=reject&id={{row['donation_id']}}">Reject</a></td>
+					{% elif row['status']=='Accepted' %}
+					<td><a class="btn btn-success" href="hospital_chat_user?&id={{row['login_id']}}">Chat</a></td>
+					{%else%}
+					<td>{{row['status']}}</td>
+					{% endif %}
+					
+				</tr>
+				{% endfor %}
+			</table>
+
+</center>
+
+{% include'footer.html' %}

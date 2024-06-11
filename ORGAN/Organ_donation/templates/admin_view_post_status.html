@@ -1,0 +1,37 @@
+{% include'admin_header.html' %}
+
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="height: 500px">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>Welcome to Organ Donation</h1>
+    </div>
+  </section><!-- End Hero -->
+  
+<center>
+	<h2>Post</h2>
+			<table class="table" style="width: 800px">
+				<tr>
+					<th>Sl.no</th>
+					<th>Title</th>
+					<th>Organ Name</th>
+					<th>Description</th>
+					<th>Operation Date</th>
+					<th>Status</th>
+				</tr>
+				{% for row in data['ps'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['title']}}</td>
+					<td>{{row['organ_name']}}</td>
+					<td>{{row['description']}}</td>
+					<td>{{row['operation_date']}}</td>
+					<td>{{row['status']}}</td>
+					
+				</tr>
+				{% endfor %}
+			</table>
+
+</center>
+
+{% include'footer.html' %}

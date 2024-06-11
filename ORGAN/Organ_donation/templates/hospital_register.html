@@ -1,0 +1,63 @@
+{% include 'public_header.html'%}
+ 
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+     
+  
+
+
+     <form method="post" >
+								<br><br><br>
+	<center>
+	<h2>Manage Hospital</h2>
+			<table class="table" style="width: 600px;color: white">
+				<tr>
+					<th>Name</th>
+					<td><input type="text" name="name" pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Place</th>
+					<td><input type="text" name="pl" pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Phone</th>
+					<td>
+					<input type="text" name="ph" required="" class="form-control">
+				</td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td>
+					<input type="email" name="em" required="" class="form-control">
+				</td>
+				</tr>
+				<tr>
+					<th>UserName</th>
+					<td>
+					<input type="text" name="uname" required="" class="form-control">
+				</td>
+				</tr>
+				<tr>
+					<th>Password</th>
+					<td>
+					<input type="password" name="pass" required="" class="form-control">
+				</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" name="manage" value="Register" class="btn btn-info"></td>
+				</tr>
+			</table>
+	</center>
+</form>
+							
+    
+  </div>
+  </section><!-- End Hero -->
+
+  							
+							
+				
+
+{% include 'footer.html'%}

@@ -1,0 +1,44 @@
+{% include'hospital_header.html' %}
+
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="height: 600px">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      
+   
+
+<form method="post">
+		<center>
+		{% if data['dir'] %}
+		<br><br><br><br>
+							<h2>My Profile</h2>
+			<table class="table" style="width: 600px;color: white">
+				<tr>
+					<th>Name</th>
+					<td><input type="text" name="name" value="{{data['dir'][0]['hospital_name']}}" required pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Place</th>
+					<td><input type="text" name="pl" value="{{data['dir'][0]['place']}}" required  class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Phone</th>
+					<td><input type="text" name="ph" value="{{data['dir'][0]['phone']}}" required  class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td><input type="text" name="em" value="{{data['dir'][0]['email']}}" required  class="form-control"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" name="update" value="UPDATE" class="btn btn-info btn-sm"></td>
+				</tr>
+			</table>
+					{%endif%}
+
+		</center>
+	</form>
+
+	 </div>
+  </section><!-- End Hero -->
+
+{% include'footer.html' %}

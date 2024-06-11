@@ -1,0 +1,35 @@
+{% include'hospital_header.html' %}
+
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="height: 500px">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>Welcome to Organ Donation</h1>
+    </div>
+  </section><!-- End Hero -->
+  
+<center>
+	<h2>User</h2>
+			<table class="table" style="width: 800px">
+				<tr>
+					<th>Sl.no</th>
+					<th>User</th>
+					<th>Place</th>
+					<th>Phone</th>
+					<th>Email</th>
+				</tr>
+				{% for row in data['us'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['first_name']}} {{row['last_name']}}</td>
+					<td>{{row['place']}}</td>
+					<td>{{row['phone']}}</td>
+					<td>{{row['email']}}</td>
+					
+				</tr>
+				{% endfor %}
+			</table>
+
+</center>
+
+{% include'footer.html' %}

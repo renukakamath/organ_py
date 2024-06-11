@@ -1,0 +1,38 @@
+{% include'userheader.html' %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+<form method="post">
+						 </div>
+  </section><!-- End Hero -->
+		<center>
+	<h2>Post</h2>
+			<table class="table" style="width: 800px">
+				<tr>
+					<th>Sl.no</th>
+					<th>Title</th>
+					<th>Organ Name</th>
+					<th>Date</th>
+					<th>Status</th>
+					<!-- <th>Operation Date</th> -->
+					<!-- <th>Status</th> -->
+				</tr>
+				{% for row in data['ps'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['title']}}</td>
+					<td>{{row['organ_name']}}</td>
+					<td>{{row['date']}}</td>
+					<td>{{row['status']}}</td>
+					<!-- <td>{{row['operation_date']}}</td> -->
+					<!-- <td>{{row['status']}}</td> -->
+					<td><a href="user_chat_others?did={{row['login_id']}}">Chat</a></td>
+					
+				</tr>
+				{% endfor %}
+			</table>
+
+</center>
+	</form>
+{% include'footer.html' %}

@@ -1,0 +1,59 @@
+{% include'userheader.html' %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+<form method="post">
+		<center>
+
+						<h2>Send Organ Request</h2>
+			<table class="table" style="width: 600px;color: white">
+				
+				<tr>
+					<th>Title</th>
+					<td><input type="text" name="title" required="" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Organ Name</th>
+					<td><input type="text" name="oname" required="" class="form-control"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center"><input type="submit" name="send" value="Send" class="btn btn-info"></td>
+				</tr>
+			</table>
+						 </div>
+  </section><!-- End Hero -->
+	
+
+
+		</center>
+		<center>
+	<h2>Post</h2>
+			<table class="table" style="width: 800px">
+				<tr>
+					<th>Sl.no</th>
+					<th>Title</th>
+					<th>Organ Name</th>
+					<th>Date</th>
+					<th>Status</th>
+					<!-- <th>Operation Date</th> -->
+					<!-- <th>Status</th> -->
+				</tr>
+				{% for row in data['ps'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{row['title']}}</td>
+					<td>{{row['organ_name']}}</td>
+					<td>{{row['date']}}</td>
+					<td>{{row['status']}}</td>
+					<!-- <td>{{row['operation_date']}}</td> -->
+					<!-- <td>{{row['status']}}</td> -->
+					
+				</tr>
+				{% endfor %}
+			</table>
+
+</center>
+	</form>
+{% include'footer.html' %}

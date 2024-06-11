@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/organdon"
+    android:gravity="center"
+    tools:context=".Userregisteration">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#0E0E0E"
+        android:gravity="center"
+        android:text="REGISTERATION" />
+
+    <EditText
+        android:id="@+id/etfname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:layout_marginTop="05dp"
+        android:inputType="textPersonName"
+        android:hint="FIRST NAME" />
+
+    <EditText
+        android:id="@+id/etlname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:layout_marginTop="05dp"
+        android:inputType="textPersonName"
+        android:hint="LAST NAME" />
+
+
+<!--    <RadioGroup-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="05dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:checked="true"-->
+<!--            android:text="Female" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButton2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Male" />-->
+<!--    </RadioGroup>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etdob"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:layout_marginTop="05dp"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="DOB" />-->
+<!--    <EditText-->
+<!--        android:id="@+id/ethouse"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:layout_marginTop="05dp"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="House Name" />-->
+
+    <EditText
+        android:id="@+id/etplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="05dp"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="Place" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/etpin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:layout_marginTop="05dp"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="Pincode" />-->
+
+    <EditText
+        android:id="@+id/etphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:layout_marginTop="05dp"
+        android:inputType="phone"
+        android:hint="PHONE NO"/>
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:layout_marginTop="05dp"
+        android:inputType="textEmailAddress"
+        android:hint="EMAIL"/>
+
+
+    <EditText
+        android:id="@+id/etuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="05dp"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="USERNAME" />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="05dp"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:hint="PASSWORD"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER" />
+</LinearLayout>

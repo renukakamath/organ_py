@@ -1,0 +1,81 @@
+{% include'hospital_header.html' %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="height: 500px">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      
+      <center>
+      	<form method="post">
+      	<h2>Post Request</h2>
+      	<table class="table" style="width: 850px; color: white;">
+      		<tr>
+      			<th>Title</th>
+      			<td><input type="text" name="title" class="form-control" required></td>
+      		</tr>
+      		<tr>
+      			<th>Organ Name</th>
+      			<td><input type="text" name="oraganname" class="form-control" required></td>
+      		</tr>
+      		<tr>
+      			<th>description</th>
+      			<td><input type="text" name="description" class="form-control" required></td>
+      		</tr>
+      		<tr>
+      			<td align="center" colspan="2"><input type="submit" name="submit" value="Request" class="btn btn-success"></td>
+      		</tr>
+      	</table>
+      	</form>
+      </center>
+    </div>
+  </section><!-- End Hero -->
+  
+<center>
+	<h2>Post</h2>
+			<table class="table" style="width: 1200px">
+				<tr>
+					<th>Sl.no</th>
+					<th>User</th>
+					<th>Title</th>
+					<th>Organ Name</th>
+					<th>Description</th>
+					<th>Operation Date</th>
+					<!-- <th>Date</th> -->
+					<th>Status</th>
+				</tr>
+				{% for row in data['dn'] %}
+				<tr>
+					<td>{{loop.index}}</td>
+					{% if row['type']=='user' %}
+					<td><a class="btn btn-info" href="hospital_view_requested_user_details?id={{row['user_id']}}">User</a>
+						{% else %}
+						<td>Hospital</td>
+					<!-- <td ><a class="btn btn-info" href="hospital_view_requested_user_details?id={{row['user_id']}}">Hospital</a> -->
+						{% endif %}
+						
+					</td>
+					<td>{{row['title']}}</td>
+					<td>{{row['organ_name']}}</td>
+					<td>{{row['description']}}</td>
+
+					{% if row['operation_date']=='pending' %}
+					<td><a class="btn btn-info" href="hospital_send_operation_date?pid={{row['post_id']}}">Operation Date</a>
+					{% else %}
+					<td>{{row['operation_date']}}</td>
+					{% endif %}
+
+					
+					<!-- <td>{{row['date']}}</td> -->
+					{% if row['status']=='pending' %}
+					<td><a class="btn btn-info" href="?action=accept&id={{row['post_id']}}">ACCEPT</a>
+					<a class="btn btn-success" href="?action=reject&id={{row['post_id']}}">REJECT</a></td>
+					{% else %}
+					<td>{{row['status']}}</td>
+					{% endif %}
+					<td><a class="btn btn-info" href="hospital_chat_requested_user?id={{row['login_id']}}">Chat</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+
+</center>
+
+{% include'footer.html' %}

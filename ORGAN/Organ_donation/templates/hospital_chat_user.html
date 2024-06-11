@@ -1,0 +1,45 @@
+{% include 'hospital_header.html' %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="height: 500px">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>Welcome to Organ Donation</h1>
+    </div>
+  </section><!-- End Hero -->
+  
+<center>
+		<center>
+		    <form method="post">
+      <h2>Send Message</h2>
+      <table class="table" style="width: 600px">
+        <tr>
+          <th>Message</th>
+          <td><input type="text" required name="msg" pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+          <td><input type="submit" name="submit" value="SEND" class="btn btn-info"></td>
+        </tr>
+      </table>
+            
+
+  <center>
+      <br>
+      <h2>Message</h2>
+      <table class="table" style="width: 600px">
+        
+        {% for row in data['chat'] %}
+        <tr>
+        {% if row['sender_id'] == data['lid'] %}
+        <td><input hidden="" type="text" name=""   class="form-control"></td>
+          <td><input type="text" name=""   class="form-control" value="{{row['message']}}">
+          </td>
+        {% else %}
+        
+          <td><input type="text" name=""   value="{{row['message']}}"  class="form-control" >
+          </td>
+          <td><input hidden="" type="text"   class="form-control" name=""></td>
+        {% endif %}
+        </tr>
+        {% endfor %}
+      </table>
+
+</center>
+{% include 'footer.html' %}

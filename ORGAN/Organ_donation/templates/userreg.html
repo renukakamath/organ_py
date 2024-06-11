@@ -1,0 +1,53 @@
+{% include'userheader.html' %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+<form method="post">
+		<center>
+		<br><br><br><br>
+						<h2>User Registration</h2>
+			<table class="table" style="width: 600px;">
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fi" pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Last name</th>
+					<td><input type="text" name="la" pattern="[a-zA-Z\s]{0,30}" title="enter alphabets only" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Place</th>
+					<td><input type="text" name="pl" class="form-control"></td>
+				</tr>
+					<tr>
+					<th>Phone</th>
+					<td><input type="text" name="ph" class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td>
+					<input type="email" name="em" required="" class="form-control">
+				</td>
+				</tr>
+				<tr>
+					<th>UserName</th>
+					<td>
+					<input type="text" name="us" required="" class="form-control">
+				</td>
+				</tr>
+				<tr>
+					<th>Password</th>
+					<td>
+					<input type="password" name="pa" required="" class="form-control">
+				</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" name="manage" value="Manage" class="btn btn-info"></td>
+				</tr>
+			</table>
+						 </div>
+  </section><!-- End Hero -->
+		</center>
+	</form>
+{% include'footer.html' %}
